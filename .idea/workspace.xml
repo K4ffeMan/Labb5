@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labb5/buttons/DigitButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" afterDir="false" />
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Start">
+      <change afterPath="$PROJECT_DIR$/src/labb5/Huvudprogram/Huvudprogram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/Situation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -77,13 +76,7 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1676903219716</updated>
     </task>
-    <task id="LOCAL−00003" summary="fixade struktur">
-      <created>1676987581434</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1676987581434</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +95,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
-    <MESSAGE value="fixade struktur" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixade struktur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start" />
   </component>
 </project>
