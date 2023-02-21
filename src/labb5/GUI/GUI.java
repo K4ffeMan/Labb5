@@ -1,4 +1,4 @@
-package labb5;
+package labb5.GUI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +8,7 @@ import java.awt.GridBagLayout;
 
 
 
-class GUI extends JFrame implements ActionListener {
+public class GUI extends JFrame implements ActionListener {
     private static JTextField inputBox;
     private static void display(){
         JFrame frame = new JFrame("Calculator");

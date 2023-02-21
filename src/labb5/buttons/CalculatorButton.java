@@ -1,6 +1,6 @@
 package labb5.buttons;
 
-import labb5.Situation;
+import labb5.GUI.Situation;
 
 public abstract class CalculatorButton {
     public abstract void transition();

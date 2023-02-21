@@ -1,4 +1,4 @@
-package labb5;
+package labb5.GUI;
 
 import javax.swing.*;
 
