@@ -17,12 +17,7 @@ public class BinOpButton extends CalculatorButton{
     public int applyAsInt(int a, int b) {
         return operator.applyAsInt(a, b);
 
-        new BinOpButton("*", getSituation(), new IntBinaryOperator() {
-            @Override
-            public int applyAsInt(int left, int right) {
-                return left*right;
-            }
-        });
+
     }
 
     @Override

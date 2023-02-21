@@ -1,116 +1,110 @@
 package labb5.GUI;
-
 import labb5.buttons.*;
-
-
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.util.function.IntBinaryOperator;
 
 
-public class GUI extends JFrame implements ActionListener {
+public class GUI extends JFrame {
 
-    Situation situation = new Situation(new JLabel());
-    private static JTextField inputBox;
-    private void display(){
+    JPanel canvas;
+    JPanel keypad;
+    JLabel display;
+
+
+
+    public GUI() {
+        Situation situation = new Situation(new JLabel());
+
         JFrame frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        UI(frame);
-        frame.setSize(300, 300);
-        frame.setLocationRelativeTo(null); //Centrerar miniräknaren (förhoppningsvis)
-        //frame.pack();
-        frame.setVisible(true);
+
+        // Skapa Canvas (som målarduk i labb 3)
+        canvas = new JPanel();
+        canvas.setPreferredSize(new Dimension(400, 400));
+        canvas.setLayout(new GridBagLayout());
+        setContentPane(canvas);
 
 
-    }
+        //Skapa displayen
+        display = new JLabel();
+        display.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        display.setText("0"); // Texten i display ska vara 0 från start.
+        display.setHorizontalAlignment(SwingConstants.RIGHT);
 
-    private void UI(JFrame frame){
-        JPanel jpanel = new JPanel();
-        GUI gui = new GUI();
-        GridBagLayout layout = new GridBagLayout();
+
+        //Lägg till Display
         GridBagConstraints constraints = new GridBagConstraints();
-        jpanel.setLayout(layout);
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.weighty = 1; constraints.weightx = 1;
+        constraints.gridy = 0; constraints.gridx = 0;
+        canvas.add(display, constraints);
 
-        inputBox = new JTextField(10); // antalet columns
-        inputBox.setEditable(false); // Gör text inputs non editable.
+
+        //Keypad
+        keypad = new JPanel();
+        keypad.setLayout(new GridLayout(4, 4));
+
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.weighty = 9; constraints.weightx = 1;
+        constraints.gridy = 1; constraints.gridx = 0;
+        canvas.add(keypad, constraints);
 
 
-        //Knappen för addition (+)
-        BinOpButton plusKnapp = new BinOpButton("+", situation, new IntBinaryOperator() {
+
+        keypad.add(new DigitButton("0", situation));
+        keypad.add(new DigitButton("1", situation));
+        keypad.add(new DigitButton("2", situation));
+        keypad.add(new DigitButton("3", situation));
+        keypad.add(new DigitButton("4", situation));
+        keypad.add(new DigitButton("5", situation));
+        keypad.add(new DigitButton("6", situation));
+        keypad.add(new DigitButton("7", situation));
+        keypad.add(new DigitButton("8", situation));
+        keypad.add(new DigitButton("9", situation));
+
+
+
+        //Addtionsknapp
+        keypad.add(new BinOpButton("+", situation, new IntBinaryOperator()) {
             @Override
             public int applyAsInt(int left, int right) {
-                return left+right;
+                return left + right;
             }
         });
 
-        //Knappen för subtraktion(-)
-        BinOpButton minusKnapp = new BinOpButton("-", situation, new IntBinaryOperator() {
+
+        //Subtraktionsknapp
+        keypad.add(new BinOpButton("-", situation, new IntBinaryOperator()) {
             @Override
             public int applyAsInt(int left, int right) {
-                return left-right;
+                return left - right;
             }
         });
 
-        // Knappen för multiplikation (*)
-        BinOpButton multiKnapp = new BinOpButton("*", situation, new IntBinaryOperator() {
+        keypad.add(new BinOpButton("*", situation, new IntBinaryOperator()) {
             @Override
             public int applyAsInt(int left, int right) {
-                return left*right;
-            }
-        });
-        // (/) knappen för division
-        BinOpButton divKnapp = new BinOpButton("/", situation, new IntBinaryOperator() {
-            @Override
-            public int applyAsInt(int left, int right) {
-                return left/right;
+                return left * right;
             }
         });
 
-        // C (clear) knappen
-        CancelButton clearKnapp = new CancelButton(situation);
+        keypad.add(new BinOpButton("/", situation, new IntBinaryOperator()) {
+            @Override
+            public int applyAsInt(int left, int right) {
+                return left / right;
+            }
+        });
 
-        //Lika med knapp (=)
-        EqualsButton likaMedKnapp = new EqualsButton("=", situation);
-
-        //Siffrorna 0-9 knapparna
-        DigitButton knapp0 = new DigitButton("0", situation);
-        DigitButton knapp1 = new DigitButton("1", situation);
-        DigitButton knapp2 = new DigitButton("2", situation);
-        DigitButton knapp3 = new DigitButton("3", situation);
-        DigitButton kanpp4 = new DigitButton("4", situation);
-        DigitButton knapp5 = new DigitButton("5", situation);
-        DigitButton knapp6 = new DigitButton("6", situation);
-        DigitButton knapp7 = new DigitButton("7", situation);
-        DigitButton knapp8 = new DigitButton("8", situation);
-        DigitButton knapp9 = new DigitButton("9", situation);
-
-        plusKnapp.addActionListener(gui);
-        minusKnapp.addActionListener(gui);
-        divKnapp.addActionListener(gui);
-        multiKnapp.addActionListener(gui);
-        clearKnapp.addActionListener(gui);
-        knapp0.addActionListener(gui);
-        knapp1.addActionListener(gui);
-        knapp2.addActionListener(gui);
-        knapp3.addActionListener(gui);
-        kanpp4.addActionListener(gui);
-        knapp5.addActionListener(gui);
-        knapp6.addActionListener(gui);
-        knapp7.addActionListener(gui);
-        knapp8.addActionListener(gui);
-        knapp9.addActionListener(gui);
+        keypad.add(new CancelButton(situation));
 
 
+        pack();
+        setVisible(true);
 
-    }
-
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
     }
 }
