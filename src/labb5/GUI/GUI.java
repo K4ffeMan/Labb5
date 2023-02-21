@@ -40,27 +40,28 @@ public class GUI extends JFrame implements ActionListener {
         BinOpButton plusKnapp = new BinOpButton("+", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
-                return 0;
+                return left+right;
             }
         });
         BinOpButton minusKnapp = new BinOpButton("-", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
-                return 0;
+                return left-right;
             }
         });
         BinOpButton multiKnapp = new BinOpButton("*", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
-                return 0;
+                return left*right;
             }
         });
         BinOpButton divKnapp = new BinOpButton("/", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
-                return 0;
+                return left/right;
             }
         });
+
         CancelButton clearKnapp = new CancelButton(situation);
 
 

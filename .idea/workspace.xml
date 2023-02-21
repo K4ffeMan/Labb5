@@ -83,7 +83,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1676991402375</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Laggt in knappar i GUI">
+      <created>1676991487202</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1676991487202</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
