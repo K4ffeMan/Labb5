@@ -1,3 +1,5 @@
+package labb5;
+
 import javax.swing.*;
 
 public class Situation {
