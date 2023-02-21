@@ -1,5 +1,6 @@
 package labb5.GUI;
 
+import labb5.buttons.*;
 import javax.swing.*;
 
 public class Situation {

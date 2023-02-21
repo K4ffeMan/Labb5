@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Start">
-      <change afterPath="$PROJECT_DIR$/src/labb5/Huvudprogram/Huvudprogram.java" afterDir="false" />
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Cleanups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/Situation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1676903219716</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Cleanups">
+      <created>1676989041312</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1676989041312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+    <MESSAGE value="Cleanups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanups" />
   </component>
 </project>
