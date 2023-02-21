@@ -1,6 +1,6 @@
 package labb5.buttons;
 
-import labb5.Situation;
+import labb5.GUI.Situation;
 
 import java.util.function.IntBinaryOperator;
 
@@ -13,7 +13,7 @@ public class BinOpButton extends CalculatorButton{
 
 
     }
-    
+
     public int applyAsInt(int a, int b) {
         return operator.applyAsInt(a, b);
     }
