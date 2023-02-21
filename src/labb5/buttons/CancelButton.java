@@ -16,7 +16,7 @@ public class CancelButton extends CalculatorButton {
         Situation situation = getSituation();
 
         situation.getDisplay().setText("0");
-        situation.resetState();
+        situation.setState(Situation.State.Input1);
         situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);
     }
 }

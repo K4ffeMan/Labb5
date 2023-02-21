@@ -14,12 +14,16 @@ public class Situation {
         this.display = display;
     }
 
-    private enum State{
+    public enum State{
         Input1, OpReady, Input2, HasResult
     }
 
     public JLabel getDisplay() {
         return display;
+    }
+
+    public int getLeftOperand() {
+        return leftOperand;
     }
 
     public void setLeftOperand(int a) {
@@ -30,15 +34,26 @@ public class Situation {
         return binaryOperator;
     }
 
+    public void setBinaryOperator(BinOpButton btn) {
+        binaryOperator = btn;
+    }
+
     public State getState() {
         return state;
     }
 
-    public void resetState() {
-        state = State.Input1;
+    public void setState(State stateIn) {
+        state = stateIn;
+    }
+    public void setStateOpReady() {
+        state = State.OpReady;
     }
 
-    public void moveState() {
-        // flytta state ett steg till höger
+    public void setStateInput2() {
+        state = State.Input2;
+    }
+
+    public void setStateHasResult() {
+        state = State.HasResult;
     }
 }
