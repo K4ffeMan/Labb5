@@ -61,7 +61,7 @@ public class GUI extends JFrame implements ActionListener {
                 return 0;
             }
         });
-        CancelButton clearKnapp = new CancelButton("C", situation);
+        CancelButton clearKnapp = new CancelButton(situation);
 
 
         JButton knapp0 = new JButton("0");
