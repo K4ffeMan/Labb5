@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Laggt in knappar i GUI">
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Knapp funktioner i gui">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1676991487202</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Knapp funktioner i gui">
+      <created>1676991827370</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1676991827370</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +118,7 @@
     <MESSAGE value="Start" />
     <MESSAGE value="Cleanups" />
     <MESSAGE value="Laggt in knappar i GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laggt in knappar i GUI" />
+    <MESSAGE value="Knapp funktioner i gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Knapp funktioner i gui" />
   </component>
 </project>

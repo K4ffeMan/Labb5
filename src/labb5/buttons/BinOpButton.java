@@ -22,7 +22,7 @@ public class BinOpButton extends CalculatorButton{
             public int applyAsInt(int left, int right) {
                 return left*right;
             }
-        })
+        });
     }
 
     @Override
