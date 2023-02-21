@@ -12,8 +12,6 @@ public abstract class CalculatorButton extends JButton implements ActionListener
     private static final int SIDA = 100;
     public abstract void transition();
 
-
-
     private String text;
     private Situation situation;
     public CalculatorButton(String textIn, Situation situationIn) {
@@ -32,8 +30,12 @@ public abstract class CalculatorButton extends JButton implements ActionListener
         return text;
     }
 
+    public Situation getSituation() {
+        return situation;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        transition();
     }
 }
