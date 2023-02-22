@@ -15,7 +15,6 @@ public class DigitButton extends CalculatorButton {
         JLabel display = situation.getDisplay();
 
         if (situation.getState() == Situation.State.OpReady) {
-            System.out.println("ändrade state till input 2");
             situation.setState(Situation.State.Input2);
             display.setText(getText());
             return;

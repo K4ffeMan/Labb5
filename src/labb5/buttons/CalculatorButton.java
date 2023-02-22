@@ -38,6 +38,7 @@ public abstract class CalculatorButton extends JButton implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
         transition();
+        System.out.println("Efter knapptryck är state: " + getSituation().getState());
     }
 
     public void resetOperator() {

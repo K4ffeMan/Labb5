@@ -18,8 +18,6 @@ public class EqualsButton extends CalculatorButton {
             situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);
             situation.getDisplay().setText(result + "");
             situation.setState(Situation.State.HasResult);
-
-            System.out.println("klickade equals " + result);
         }
     }
 }

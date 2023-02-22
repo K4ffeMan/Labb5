@@ -29,11 +29,11 @@ public class BinOpButton extends CalculatorButton{
         setColor(Konstanter.BUTTON_ACTIVE_COLOR);
 
         situation.setBinaryOperator(this);
-        situation.setState(Situation.State.OpReady);
-        String current = situation.getDisplay().getText();
-        int left = Integer.parseInt(current);
-        situation.setLeftOperand(left);
-
-
+        if (situation.getState() != Situation.State.Input2) {
+            situation.setState(Situation.State.OpReady);
+            String current = situation.getDisplay().getText();
+            int left = Integer.parseInt(current);
+            situation.setLeftOperand(left);
+        }
     }
 }
