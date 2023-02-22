@@ -19,7 +19,7 @@ public abstract class CalculatorButton extends JButton implements ActionListener
         situation = situationIn;
         setPreferredSize(new Dimension(SIDA, SIDA));
         setText(text);
-
+        setFont(new Font(Font.SERIF, Font.PLAIN, 50));
     }
 
     public void setColor(Color color) {

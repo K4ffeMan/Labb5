@@ -34,6 +34,7 @@ public class GUI extends JFrame {
         display.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         display.setText("0"); // Texten i display ska vara 0 från start.
         display.setHorizontalAlignment(SwingConstants.RIGHT);
+        display.setFont(new Font(Font.SERIF, Font.PLAIN, 40));
 
 
         //Lägg till Display
@@ -100,6 +101,8 @@ public class GUI extends JFrame {
         }));
 
         keypad.add(new CancelButton(situation));
+
+        keypad.add(new EqualsButton("=", situation));
 
 
         pack();

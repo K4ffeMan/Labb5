@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Lite små fixes">
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1676895613052</updated>
       <workItem from="1676895613557" duration="9565000" />
-      <workItem from="1677002509253" duration="4997000" />
+      <workItem from="1677002509253" duration="5062000" />
+      <workItem from="1677055980140" duration="592000" />
     </task>
     <task id="LOCAL−00001" summary="Start">
       <created>1676895816133</created>
@@ -104,7 +105,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1676996564409</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.">
+      <created>1677008471900</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1677008471900</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +134,7 @@
     <MESSAGE value="Laggt in knappar i GUI" />
     <MESSAGE value="Knapp funktioner i gui" />
     <MESSAGE value="Lite små fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lite små fixes" />
+    <MESSAGE value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
   </component>
 </project>
