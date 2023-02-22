@@ -1,0 +1,108 @@
+Index: src/labb5/buttons/CalculatorButton.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package labb5.buttons;\r\n\r\nimport labb5.GUI.Situation;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.border.Border;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic abstract class CalculatorButton extends JButton implements ActionListener {\r\n    private static final int SIDA = 100;\r\n    public abstract void transition();\r\n\r\n    private String text;\r\n    private Situation situation;\r\n    public CalculatorButton(String textIn, Situation situationIn) {\r\n        text = textIn;\r\n        situation = situationIn;\r\n        setPreferredSize(new Dimension(SIDA, SIDA));\r\n        setText(text);\r\n        setFont(new Font(Font.SERIF, Font.PLAIN, 50));\r\n    }\r\n\r\n    public void setColor(Color color) {\r\n        setBorder(BorderFactory.createLineBorder(color));\r\n    }\r\n\r\n    public String toString() {\r\n        return text;\r\n    }\r\n\r\n    public Situation getSituation() {\r\n        return situation;\r\n    }\r\n\r\n    @Override\r\n    public void actionPerformed(ActionEvent e) {\r\n        transition();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/labb5/buttons/CalculatorButton.java b/src/labb5/buttons/CalculatorButton.java
+--- a/src/labb5/buttons/CalculatorButton.java	(revision 6496278e789c9e0b196bc01a52605939da99bee7)
++++ b/src/labb5/buttons/CalculatorButton.java	(date 1677057529910)
+@@ -19,7 +19,7 @@
+         situation = situationIn;
+         setPreferredSize(new Dimension(SIDA, SIDA));
+         setText(text);
+-        setFont(new Font(Font.SERIF, Font.PLAIN, 50));
++        setFont(new Font("COMIC SANS", Font.PLAIN, 50));
+     }
+ 
+     public void setColor(Color color) {
+Index: src/labb5/buttons/CancelButton.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package labb5.buttons;\r\n\r\nimport labb5.GUI.Situation;\r\nimport labb5.verktyg.Konstanter;\r\n\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\n\r\npublic class CancelButton extends CalculatorButton {\r\n    public CancelButton(Situation situationIn) {\r\n        super(\"C\", situationIn);\r\n    }\r\n\r\n    @Override\r\n    public void transition() {\r\n        Situation situation = getSituation();\r\n\r\n        situation.getDisplay().setText(\"0\");\r\n        situation.setState(Situation.State.Input1);\r\n        situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/labb5/buttons/CancelButton.java b/src/labb5/buttons/CancelButton.java
+--- a/src/labb5/buttons/CancelButton.java	(revision 6496278e789c9e0b196bc01a52605939da99bee7)
++++ b/src/labb5/buttons/CancelButton.java	(date 1677069403639)
+@@ -1,6 +1,6 @@
+ package labb5.buttons;
+ 
+-import labb5.GUI.Situation;
++import labb5.GUI.*;
+ import labb5.verktyg.Konstanter;
+ 
+ import java.awt.*;
+@@ -13,6 +13,7 @@
+ 
+     @Override
+     public void transition() {
++
+         Situation situation = getSituation();
+ 
+         situation.getDisplay().setText("0");
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d8b8125c-d40e-45ea-99ba-c41c8185b1c7\" name=\"Changes\" comment=\"GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/labb5/GUI/GUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/labb5/GUI/GUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2M0DSqHbhlfSih37y8h7i5RMqdh\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d8b8125c-d40e-45ea-99ba-c41c8185b1c7\" name=\"Changes\" comment=\"\" />\r\n      <created>1676895613052</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1676895613052</updated>\r\n      <workItem from=\"1676895613557\" duration=\"9565000\" />\r\n      <workItem from=\"1677002509253\" duration=\"5062000\" />\r\n      <workItem from=\"1677055980140\" duration=\"592000\" />\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"Start\">\r\n      <created>1676895816133</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1676895816133</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"Start\">\r\n      <created>1676903219716</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1676903219716</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00003\" summary=\"Cleanups\">\r\n      <created>1676989041312</created>\r\n      <option name=\"number\" value=\"LOCAL−00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00003\" />\r\n      <updated>1676989041312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00004\" summary=\"Laggt in knappar i GUI\">\r\n      <created>1676991402375</created>\r\n      <option name=\"number\" value=\"LOCAL−00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00004\" />\r\n      <updated>1676991402375</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00005\" summary=\"Laggt in knappar i GUI\">\r\n      <created>1676991487202</created>\r\n      <option name=\"number\" value=\"LOCAL−00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00005\" />\r\n      <updated>1676991487202</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00006\" summary=\"Knapp funktioner i gui\">\r\n      <created>1676991827370</created>\r\n      <option name=\"number\" value=\"LOCAL−00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00006\" />\r\n      <updated>1676991827370</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00007\" summary=\"Lite små fixes\">\r\n      <created>1676996564409</created>\r\n      <option name=\"number\" value=\"LOCAL−00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00007\" />\r\n      <updated>1676996564409</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00008\" summary=\"GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.\">\r\n      <created>1677008471900</created>\r\n      <option name=\"number\" value=\"LOCAL−00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00008\" />\r\n      <updated>1677008471900</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Start\" />\r\n    <MESSAGE value=\"Cleanups\" />\r\n    <MESSAGE value=\"Laggt in knappar i GUI\" />\r\n    <MESSAGE value=\"Knapp funktioner i gui\" />\r\n    <MESSAGE value=\"Lite små fixes\" />\r\n    <MESSAGE value=\"GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6496278e789c9e0b196bc01a52605939da99bee7)
++++ b/.idea/workspace.xml	(date 1677069403717)
+@@ -4,10 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.">
++    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Fixade fonterna.&#10;Samt gjorde själva gui:n mer läsbar för den som kollar på miniräknaren">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -61,7 +61,7 @@
+       <updated>1676895613052</updated>
+       <workItem from="1676895613557" duration="9565000" />
+       <workItem from="1677002509253" duration="5062000" />
+-      <workItem from="1677055980140" duration="592000" />
++      <workItem from="1677055980140" duration="2661000" />
+     </task>
+     <task id="LOCAL−00001" summary="Start">
+       <created>1676895816133</created>
+@@ -111,7 +111,19 @@
+       <option name="presentableId" value="LOCAL−00008" />
+       <updated>1677008471900</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL−00009" summary="Fixade fonterna.&#10;Samt gjorde själva gui:n mer läsbar för den som kollar på miniräknaren">
++      <created>1677056645577</created>
++      <option name="number" value="LOCAL−00009" />
++      <option name="presentableId" value="LOCAL−00009" />
++      <updated>1677056645577</updated>
++    </task>
++    <task id="LOCAL−00010" summary="Fixade fonterna.&#10;Samt gjorde själva gui:n mer läsbar för den som kollar på miniräknaren">
++      <created>1677056686926</created>
++      <option name="number" value="LOCAL−00010" />
++      <option name="presentableId" value="LOCAL−00010" />
++      <updated>1677056686926</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -135,6 +147,7 @@
+     <MESSAGE value="Knapp funktioner i gui" />
+     <MESSAGE value="Lite små fixes" />
+     <MESSAGE value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
+-    <option name="LAST_COMMIT_MESSAGE" value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
++    <MESSAGE value="Fixade fonterna.&#10;Samt gjorde själva gui:n mer läsbar för den som kollar på miniräknaren" />
++    <option name="LAST_COMMIT_MESSAGE" value="Fixade fonterna.&#10;Samt gjorde själva gui:n mer läsbar för den som kollar på miniräknaren" />
+   </component>
+ </project>
+\ No newline at end of file
