@@ -58,59 +58,45 @@ public class GUI extends JFrame {
         canvas.add(keypad, constraints);
 
 
+        //-----Lägg till knappar.
 
-        keypad.add(new DigitButton("0", situation));
-        keypad.add(new DigitButton("1", situation));
-        keypad.add(new DigitButton("2", situation));
-        keypad.add(new DigitButton("3", situation));
-        keypad.add(new DigitButton("4", situation));
-        keypad.add(new DigitButton("5", situation));
-        keypad.add(new DigitButton("6", situation));
         keypad.add(new DigitButton("7", situation));
         keypad.add(new DigitButton("8", situation));
         keypad.add(new DigitButton("9", situation));
-
-
-
-        //Addtionsknapp
-        keypad.add(new BinOpButton("+", situation, new IntBinaryOperator() {
-            @Override
-            public int applyAsInt(int left, int right) {
-                return left + right;
-            }
-        }));
-
-
-        //Subtraktionsknapp
-        keypad.add(new BinOpButton("-", situation, new IntBinaryOperator() {
-            @Override
-            public int applyAsInt(int left, int right) {
-                return left - right;
-            }
-        }));
-
-        keypad.add(new BinOpButton("*", situation, new IntBinaryOperator() {
-            @Override
-            public int applyAsInt(int left, int right) {
-                return left * right;
-            }
-        }));
-
         keypad.add(new BinOpButton("/", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
                 return left / right;
             }
         }));
-
-        keypad.add(new CancelButton(situation));
-
+        keypad.add(new DigitButton("4", situation));
+        keypad.add(new DigitButton("5", situation));
+        keypad.add(new DigitButton("6", situation));
+        keypad.add(new BinOpButton("*", situation, new IntBinaryOperator() {
+            @Override
+            public int applyAsInt(int left, int right) {
+                return left * right;
+            }
+        }));
+        keypad.add(new DigitButton("1", situation));
+        keypad.add(new DigitButton("2", situation));
+        keypad.add(new DigitButton("3", situation));
+        keypad.add(new BinOpButton("-", situation, new IntBinaryOperator() {
+            @Override
+            public int applyAsInt(int left, int right) {
+                return left - right;
+            }
+        }));
+        keypad.add(new DigitButton("0", situation));
         keypad.add(new EqualsButton(situation));
-
-
+        keypad.add(new CancelButton(situation));
+        keypad.add(new BinOpButton("+", situation, new IntBinaryOperator() {
+            @Override
+            public int applyAsInt(int left, int right) {
+                return left + right;
+            }
+        }));
         pack();
         setVisible(true);
-
-
     }
 }

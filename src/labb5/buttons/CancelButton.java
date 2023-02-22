@@ -1,6 +1,6 @@
 package labb5.buttons;
 
-import labb5.GUI.Situation;
+import labb5.GUI.*;
 import labb5.verktyg.Konstanter;
 
 import java.awt.*;
@@ -13,6 +13,7 @@ public class CancelButton extends CalculatorButton {
 
     @Override
     public void transition() {
+
         Situation situation = getSituation();
 
         resetDisplay();
