@@ -69,35 +69,35 @@ public class GUI extends JFrame {
 
 
         //Addtionsknapp
-        keypad.add(new BinOpButton("+", situation, new IntBinaryOperator()) {
+        keypad.add(new BinOpButton("+", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
                 return left + right;
             }
-        });
+        }));
 
 
         //Subtraktionsknapp
-        keypad.add(new BinOpButton("-", situation, new IntBinaryOperator()) {
+        keypad.add(new BinOpButton("-", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
                 return left - right;
             }
-        });
+        }));
 
-        keypad.add(new BinOpButton("*", situation, new IntBinaryOperator()) {
+        keypad.add(new BinOpButton("*", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
                 return left * right;
             }
-        });
+        }));
 
-        keypad.add(new BinOpButton("/", situation, new IntBinaryOperator()) {
+        keypad.add(new BinOpButton("/", situation, new IntBinaryOperator() {
             @Override
             public int applyAsInt(int left, int right) {
                 return left / right;
             }
-        });
+        }));
 
         keypad.add(new CancelButton(situation));
 
