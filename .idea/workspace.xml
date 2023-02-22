@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.">
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="gjorde klart (kanske) DigitButton och EqualsButton">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-21_14_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-02-21_14_54__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/DigitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/DigitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/verktyg/Konstanter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/verktyg/Konstanter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +57,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Huvudprogram" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="labb5.Huvudprogram.Huvudprogram" />
+      <module name="Labb5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -16,10 +16,11 @@ public class GUI extends JFrame {
 
 
     public GUI() {
-        Situation situation = new Situation(new JLabel());
+        super("Calculator");
 
-        JFrame frame = new JFrame("Calculator");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        JFrame frame = new JFrame("Calculator");
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); eftersom GUI extendar jframe tror jag inte vi behöver skapa en ny.
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         // Skapa Canvas (som målarduk i labb 3)
@@ -36,6 +37,8 @@ public class GUI extends JFrame {
         display.setHorizontalAlignment(SwingConstants.RIGHT);
         display.setFont(new Font(Font.SERIF, Font.PLAIN, 40));
 
+        // skapa situation med displayen
+        Situation situation = new Situation(display);
 
         //Lägg till Display
         GridBagConstraints constraints = new GridBagConstraints();
@@ -102,7 +105,7 @@ public class GUI extends JFrame {
 
         keypad.add(new CancelButton(situation));
 
-        keypad.add(new EqualsButton("=", situation));
+        keypad.add(new EqualsButton(situation));
 
 
         pack();
