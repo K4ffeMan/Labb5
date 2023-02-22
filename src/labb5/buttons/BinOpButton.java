@@ -1,3 +1,4 @@
+//Viggo Härdelin & Samuel Melander
 package labb5.buttons;
 
 import labb5.GUI.Situation;

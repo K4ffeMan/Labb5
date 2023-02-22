@@ -1,3 +1,4 @@
+// Viggo Härdelin & Samuel Melander
 package labb5.GUI;
 
 import labb5.buttons.BinOpButton;

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="fixade så man kan ändra operator efter andra input">
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="Korregerade knapparnas position i keypad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/Situation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/Huvudprogram/Huvudprogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/Huvudprogram/Huvudprogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/BinOpButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/DigitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/DigitButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/verktyg/Konstanter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/verktyg/Konstanter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +35,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="56a4b01e-bb2a-4927-9314-2b2382246473" />
+        <option name="url" value="https://github.com/K4ffeMan/Labb5.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -131,7 +152,13 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1677066505026</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="Korregerade knapparnas position i keypad">
+      <created>1677070642971</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1677070642971</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +184,7 @@
     <MESSAGE value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
     <MESSAGE value="ändrade smågrejer, nu fungerar miniräknaren" />
     <MESSAGE value="fixade så man kan ändra operator efter andra input" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixade så man kan ändra operator efter andra input" />
+    <MESSAGE value="Korregerade knapparnas position i keypad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Korregerade knapparnas position i keypad" />
   </component>
 </project>

@@ -1,3 +1,4 @@
+//Samuel Melander & Viggo Härdelin
 package labb5.Huvudprogram;
 import labb5.GUI.*;
 

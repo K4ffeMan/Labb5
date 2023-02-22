@@ -1,3 +1,4 @@
+// Viggo Härdelin & Samuel Melander
 package labb5.GUI;
 import labb5.buttons.*;
 import javax.swing.*;
@@ -43,7 +44,12 @@ public class GUI extends JFrame {
         //Lägg till Display
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.fill = GridBagConstraints.BOTH;
+
+        //Specifies how to distribute extra horizontal and vertical space.
         constraints.weighty = 1; constraints.weightx = 1;
+
+        //Specifies the cell containing the leading edge of the component's display area, where the first cell in a row has gridx=0.
+        //Specifies the cell at the top of the component's display area, where the topmost cell has gridy=0.
         constraints.gridy = 0; constraints.gridx = 0;
         canvas.add(display, constraints);
 

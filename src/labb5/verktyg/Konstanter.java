@@ -1,3 +1,4 @@
+//Samuel Melander & Viggo Härdelin
 package labb5.verktyg;
 
 import java.awt.*;
