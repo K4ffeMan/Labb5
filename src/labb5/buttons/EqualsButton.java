@@ -12,6 +12,12 @@ public class EqualsButton extends CalculatorButton {
     public void transition() {
         Situation situation = getSituation();
         if (situation.getState() == Situation.State.Input2) {
+
+            int right = Integer.parseInt(situation.getDisplay().getText());
+            if (right == 0) {
+                return;
+            }
+
             int result = situation.getBinaryOperator().applyAsInt(
                     situation.getLeftOperand(),
                     Integer.parseInt(situation.getDisplay().getText()));

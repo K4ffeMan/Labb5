@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt.">
+    <list default="true" id="d8b8125c-d40e-45ea-99ba-c41c8185b1c7" name="Changes" comment="fixade så man kan ändra operator efter andra input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/GUI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CalculatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/CancelButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labb5/buttons/EqualsButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Huvudprogram" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="labb5.Huvudprogram.Huvudprogram" />
+      <module name="Labb5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,7 +119,19 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1677008471900</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="ändrade smågrejer, nu fungerar miniräknaren">
+      <created>1677065472309</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1677065472309</updated>
+    </task>
+    <task id="LOCAL−00010" summary="fixade så man kan ändra operator efter andra input">
+      <created>1677066505026</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1677066505026</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +155,8 @@
     <MESSAGE value="Knapp funktioner i gui" />
     <MESSAGE value="Lite små fixes" />
     <MESSAGE value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI är färdig,&#10;Läste fel i instruktionerna så skrev typ om allt." />
+    <MESSAGE value="ändrade smågrejer, nu fungerar miniräknaren" />
+    <MESSAGE value="fixade så man kan ändra operator efter andra input" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixade så man kan ändra operator efter andra input" />
   </component>
 </project>
