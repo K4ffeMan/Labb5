@@ -14,22 +14,30 @@ public class DigitButton extends CalculatorButton {
     public void transition() {
         Situation situation = getSituation();
         JLabel display = situation.getDisplay();
-
-        if (situation.getState() == Situation.State.OpReady) {
-            situation.setState(Situation.State.Input2);
-            display.setText(getText());
-            return;
-        }
-
         String current = display.getText();
-
-
-        if (current.equals("0") || situation.getState() == Situation.State.HasResult) {
-            display.setText(getText());
-            situation.setState(Situation.State.Input1);
-            return;
+        switch (situation.getState()) {
+            case Input1 -> {
+                if (current.equals("0")) {
+                    display.setText(getText());
+                } else {
+                    display.setText(current + getText());
+                }
+            }
+            case OpReady -> {
+                situation.setState(Situation.State.Input2);
+                display.setText(getText());
+            }
+            case Input2 -> {
+                if (current.equals("0")) {
+                    display.setText(getText());
+                } else {
+                    display.setText(current + getText());
+                }
+            }
+            case HasResult -> {
+                display.setText(getText());
+                situation.setState(Situation.State.Input1);
+            }
         }
-
-        display.setText(current + getText());
     }
 }

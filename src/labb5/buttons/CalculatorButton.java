@@ -12,9 +12,12 @@ import java.awt.event.ActionListener;
 
 public abstract class CalculatorButton extends JButton implements ActionListener {
     private static final int SIDA = 100;
+
     public abstract void transition();
+
     private String text;
     private Situation situation;
+
     public CalculatorButton(String textIn, Situation situationIn) {
         text = textIn;
         situation = situationIn;
@@ -47,6 +50,7 @@ public abstract class CalculatorButton extends JButton implements ActionListener
             situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);
         }
     }
+
     public void resetDisplay() {
         situation.getDisplay().setText("0");
     }

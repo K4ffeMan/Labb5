@@ -14,9 +14,16 @@ public class CancelButton extends CalculatorButton {
 
     @Override
     public void transition() {
-
         Situation situation = getSituation();
+        switch (situation.getState()) {
+            case Input1 -> reset(situation);
+            case OpReady -> reset(situation);
+            case Input2 -> reset(situation);
+            case HasResult -> reset(situation);
+        }
+    }
 
+    private void reset(Situation situation) {
         resetDisplay();
         situation.setState(Situation.State.Input1);
         resetOperator();

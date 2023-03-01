@@ -12,19 +12,18 @@ public class EqualsButton extends CalculatorButton {
     @Override
     public void transition() {
         Situation situation = getSituation();
-        if (situation.getState() == Situation.State.Input2) {
-
-            int right = Integer.parseInt(situation.getDisplay().getText());
-            if (right == 0) {
-                return;
+        switch (situation.getState()) {
+            case Input1 -> {}
+            case OpReady -> {}
+            case Input2 -> {
+                int result = situation.getBinaryOperator().applyAsInt(
+                        situation.getLeftOperand(),
+                        Integer.parseInt(situation.getDisplay().getText()));
+                situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);
+                situation.getDisplay().setText(result + "");
+                situation.setState(Situation.State.HasResult);
             }
-
-            int result = situation.getBinaryOperator().applyAsInt(
-                    situation.getLeftOperand(),
-                    Integer.parseInt(situation.getDisplay().getText()));
-            situation.getBinaryOperator().setColor(Konstanter.BUTTON_BORDER_COLOR);
-            situation.getDisplay().setText(result + "");
-            situation.setState(Situation.State.HasResult);
+            case HasResult -> {}
         }
     }
 }
